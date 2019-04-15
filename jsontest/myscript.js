@@ -28,7 +28,6 @@ $(document).ready(function(){
             pressure = results.main.pressure;
             humidity = results.main.humidity;
             cloudiness = results.clouds.all;
-
             myWeatherInterpretation();
 
         }
@@ -40,6 +39,7 @@ $(document).ready(function(){
         
         
         //JUST SEEING IF THE VALUES COME THROUGH
+
         $('p').append('windspeed: ' + windspeed);
         $('p').append('winddeg: ' + winddeg);
         $('p').append('temp: ' + temp);
@@ -50,6 +50,40 @@ $(document).ready(function(){
         $('p').append('weathertext: ' + weathertext);
         $('p').append('weatherdescription: ' + weatherdescription);
         $('p').append('cloudiness: ' + cloudiness);
+
+        //END OF MYWEATHERINTERPRETATION FUNCTION
+    }   
+
+
+
+        $.ajax({
+        url: 'http://api.openweathermap.org/data/2.5/weather?id=658226&units=metric&APPID=65a84a167e92d119d99bf3f95cd5fd8a', //CHANGE THE URL TO YOUR API QUERY
+        dataType: 'jsonp',
+        success: function(results){
+            weathertext2 = results.weather[0].main;
+            weatherdescription2 = results.weather[0].description;
+            windspeed2 = results.wind.speed;
+            winddeg2 = results.wind.deg;
+            tempmin2 = results.main.temp_min;
+            tempmax2 = results.main.temp_max;
+            temp2 = results.main.temp;
+            pressure2 = results.main.pressure;
+            humidity2 = results.main.humidity;
+            cloudiness2 = results.clouds.all;
+            myWeatherInterpretation2();
+
+        }
+    });
+    
+
+    function myWeatherInterpretation2(){
+        //THIS IS WHERE YOU CAN CUSTOMIZE YOUR PAGE'S FUNCTIONS    
+        
+        
+        //JUST SEEING IF THE VALUES COME THROUGH
+
+        $('div').append('windspeed: ' + windspeed2);
+  
 
         //END OF MYWEATHERINTERPRETATION FUNCTION
     }   
