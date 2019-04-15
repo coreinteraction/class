@@ -1,13 +1,13 @@
 
 [
   {
-  name: "Mewoth",
-  species: "cat",
-  favFood: "tuna"
+  "name": "Mewoth",
+  "species": "cat",
+  "favFood": "tuna"
 },
   {
-    name: "doge",
-  species: "shiba",
-  favFood: "carrots"
+    "name": "doge",
+  "species": "shiba",
+  "favFood": "carrots"
   }
 ]
