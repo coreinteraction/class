@@ -1,0 +1,13 @@
+
+[
+  {
+  name: "Mewoth",
+  species: "cat",
+  favFood: "tuna"
+},
+  {
+    name: "doge",
+  species: "shiba",
+  favFood: "carrots"
+  }
+]
