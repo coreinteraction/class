@@ -9,13 +9,14 @@ var humidity; //Humidity, %
 var weathertext; //Group of weather parameters (Rain, Snow, Extreme etc.)
 var weatherdescription; //Weather condition within the group
 var cloudiness; //Cloudiness, %
+var istanbul_id = 745042;
 
 
 $(document).ready(function(){
 
 
     $.ajax({
-        url: 'https://openweathermap.org/data/2.5/weather?zip=11377,us&units=imperial&appid=b6907d289e10d714a6e88b30761fae22', //CHANGE THE URL TO YOUR API QUERY
+        url: 'http://api.openweathermap.org/data/2.5/weather?id=' + istanbul_id + '&units=imperial&APPID=be611e3081d65abcf9f2dead869ee338', //CHANGE THE URL TO YOUR API QUERY
         dataType: 'jsonp',
         success: function(results){
             weathertext = results.weather[0].main;
