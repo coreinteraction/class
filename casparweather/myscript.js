@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 
     $.ajax({
-        url: 'http://api.openweathermap.org/data/2.5/weather?id=' + istanbul_id + '&units=imperial&APPID=be611e3081d65abcf9f2dead869ee338', //CHANGE THE URL TO YOUR API QUERY
+        url: 'https://api.openweathermap.org/data/2.5/weather?id=745042&units=metric&APPID=65a84a167e92d119d99bf3f95cd5fd8a', //CHANGE THE URL TO YOUR API QUERY
         dataType: 'jsonp',
         success: function(results){
             weathertext = results.weather[0].main;
